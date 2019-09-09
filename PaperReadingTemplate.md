@@ -23,12 +23,14 @@ The main barrier of applying whole-system dynamic taint analysis in practice is 
 
 
 - Major Contribution
+
 Two independent optimizations to achieve the elasticity
 1 elastic taint status checking: 2.6 times overhead 
 2 elastic taint propagation: 1.8 times overhead.  
 
   
 - Major limitation
+
 The overhead is still high based on QEMU since QEMU's overhead is high.
   
 
@@ -37,4 +39,5 @@ The overhead is still high based on QEMU since QEMU's overhead is high.
   
 
 - Your view on the research domain/topic/approach/data/solution  (positive or negative)
+
 This DECAF++ is an update of DECAF, and the main Promotion from DECAF is Elasticity. Whole-system dynamic taint analysis applications like intrusion detection systems and honeypots can greatly benefit from the elastic property. It is a Good idea for other taint analysis tools too.
