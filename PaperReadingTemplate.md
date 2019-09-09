@@ -7,14 +7,18 @@
 
   
 ### Paper Review
+
 - Research Background
+
 Whole-system dynamic taint analysis has many unique applications such as malware analysis and fuzz testing. Compared to process-level taint analysis, it offers a wider analysis scope, a better transparency and tamper resistance. The authors already proposed a whole-system analysis tool DECAF. 
 
 
 - Problem to Solve
+
 The main barrier of applying whole-system dynamic taint analysis in practice is the large slowdown that can be sometimes up to 30 times. Existing optimization schemes have either considerable baseline overheads (when there is no tainted data) or specific hardware dependencies. They try to reduce the overhead of DECAF
 
 - Key Design and Algorithm Proposed
+
 1. Aims to remove the taint propagation overhead whenever possible. 
  It is based on the intuition that taint analysis can be skipped if the taint analysis operation does not change any taint status value. Taint analysis operations can possibly result in a change only when either of the source or the destination operand of an instruction is tainted
  2. to avoid unnecessary interactions with the shadow memory. 
